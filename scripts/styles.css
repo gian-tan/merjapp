@@ -43,6 +43,13 @@
   color: white; /* Change text to white */
 }
 
+@media (max-width: 767px) {
+  .navbar {
+    background: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+  }
+}
+
 /* Button Styling */
 .btn-orange {
   color: white;
@@ -516,4 +523,9 @@ html {
 
 .footer-nav {
   font-size: 20px;
+}
+
+.blockquote-footer {
+  color:#F36D2B;
+  font-weight: 500;
 }
