@@ -4,13 +4,13 @@
   padding: 25px;
 }
 .nav-item {
-  padding-left: 10px;
+  padding-left:10px;
+  margin-right: 20px;
 }
 .navbar-toggler {
   border-color: #F36D2B; /* Change the border color */
   background-color: #F36D2B;
 }
-
 .navbar-toggler:hover {
   background-color: #d55a24;
   border-color: #d55a24;
@@ -18,6 +18,40 @@
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   /* This replaces the default toggle icon with a custom one that uses white (#FFFFFF) */
+}
+/* Added 17 Mar */
+/* Navbar container styling */
+.nav-container {
+  background: #ffffff;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #555;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+
+.nav-container.scrolled {
+  background: rgba(50, 50, 50, 1); /* Darker color on scroll */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container.scrolled .nav-link {
+  color: white; /* Change text to white */
+}
+
+/* Button Styling */
+.btn-orange {
+  color: white;
+  padding: 8px 20px;
+}
+
+.btn-orange:hover {
+  background-color: #D4632A;
+  color: white;
 }
 
 /* BUTTONS */
@@ -38,6 +72,10 @@
 /* WEBPAGE BEHAVIOR */
 html {
   scroll-behavior: smooth;
+}
+
+.active{
+  color:#F36D2B !important;
 }
 
 /* END OF GENERAL */
@@ -100,15 +138,6 @@ html {
   overflow: hidden;
   z-index: 1; /* Adjusted to ensure main content is on top */
 }
-
-/* removed due to mobile incompatibility */
-/* Common Floating Animation for All Blur Circles */
-/* @keyframes float {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(10px, -10px); }
-  100% { transform: translate(-10px, 10px); }
-} */
-
 
 /* Large Background Blur Circles */
 .main-content::before, .main-content::after {

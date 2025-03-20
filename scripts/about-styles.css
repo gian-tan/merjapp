@@ -1,0 +1,319 @@
+/* GENERAL */
+/* NAVBAR */
+.navbar {
+    padding: 25px;
+  }
+  .nav-item {
+    padding-left:10px;
+    margin-right: 20px;
+  }
+  .navbar-toggler {
+    border-color: #F36D2B; /* Change the border color */
+    background-color: #F36D2B;
+  }
+  .navbar-toggler:hover {
+    background-color: #d55a24;
+    border-color: #d55a24;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* This replaces the default toggle icon with a custom one that uses white (#FFFFFF) */
+  }
+  /* Added 17 Mar */
+  /* Navbar container styling */
+  .nav-container {
+    background: #ffffff;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+  
+  .nav-container.scrolled {
+    background: rgba(50, 50, 50, 1); /* Darker color on scroll */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-container.scrolled .nav-link {
+    color: white; /* Change text to white */
+  }
+  
+  /* Button Styling */
+  .btn-orange {
+    color: white;
+    padding: 8px 20px;
+  }
+  
+  .btn-orange:hover {
+    background-color: #D4632A;
+    color: white;
+  }
+  
+  /* BUTTONS */
+  .btn {
+    background-color: #F36D2B;
+    border-color: #F36D2B;
+  }
+  .btn:hover {
+    background-color: #d55a24;
+    border-color: #d55a24;
+  }
+  
+  .btn:active:focus {
+    background-color: #BD5A24;
+    border-color: #BD5A24;
+  }
+  
+  /* WEBPAGE BEHAVIOR */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1 {
+    color: #F36D2B;
+  }
+
+.active{
+    color:#F36D2B !important;
+}
+ 
+
+  /* END OF GENERAL */
+  
+  /* CONTENT ONE */
+  /* Main Content */
+  .main-content {
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Adjusted to ensure main content is on top */
+  }
+  
+  /* Responsive Styles for Mobile View */
+  @media (max-width: 768px) {
+    .brand-container {
+        flex-direction: column; /* Ensure column layout on mobile */
+        align-items: center; /* Center content */
+    }
+  
+    .brand-logo {
+        margin-bottom: 5px; /* Space between logo and text on mobile */
+    }
+  
+    .brand-sub {
+        font-size: 2.5rem; /* Adjust font size for mobile if necessary */
+    }
+  }
+  
+  .brand-sub {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .download-btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    background-color: #F36D2B;
+    border-color: #F36D2B;
+    position: relative; /* Added to ensure positioning is relative to main content */
+    z-index: 2; /* Set z-index higher to ensure it appears above the blur circles */
+  }
+  
+  /* Large Background Blur Circles */
+  .main-content::before, .main-content::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0.8;
+    animation: float 7s infinite ease-in-out alternate;
+    z-index: 0; /* Set z-index lower than the main content */
+  }
+  
+  .main-content::before {
+    top: 20%; /* Adjusted to move down and prevent overlap with text */
+    left: -5%;
+    background-color: #F36D2B;
+    animation-delay: 0s;
+  }
+  
+  .main-content::after {
+    top: 80%; /* Adjusted to move down and prevent overlap with text */
+    right: 20%;
+    background-color: #98d1b0;
+    animation-delay: 5s;
+  }
+  
+  /* Additional Smaller Blur Circles */
+  .main-content .small-blur-1,
+  .main-content .small-blur-2,
+  .main-content .small-blur-3,
+  .main-content .small-blur-4 {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px); /* Reduced blur for more visibility */
+    opacity: 0.8; /* Increased opacity */
+    animation: float 9s infinite ease-in-out alternate;
+    z-index: 0; /* Set z-index lower than the main content */
+  }
+  
+  /* Position and Style for Additional Small Blurs */
+  .small-blur-1 {
+    width: 120px;
+    height: 120px;
+    background-color: #F36D2B;
+    top: 20%; /* Keep this as is */
+    left: 40%;
+    animation-delay: 2s;
+  }
+  
+  .small-blur-2 {
+    width: 100px;
+    height: 100px;
+    background-color: #98d1b0;
+    top: 65%; /* Keep this as is */
+    left: 15%;
+    animation-delay: 4s;
+  }
+  
+  .small-blur-3 {
+    width: 90px;
+    height: 90px;
+    background-color: #F36D2B;
+    bottom: 10%; /* Adjusted to keep it from overlapping */
+    right: 35%;
+    animation-delay: 6s;
+  }
+  
+  .small-blur-4 {
+    width: 70px;
+    height: 70px;
+    background-color: #98d1b0;
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 8s;
+  }
+  
+  /* Center Container */
+  .brand-container {
+    display: flex; /* Use flexbox for alignment */
+    width: 300px;
+  }
+  
+  .brand-logo {
+    width: 150px; /* Adjust size as needed */
+  }
+  
+  .brand-sub {
+    font-size: 3.5rem; /* Font size */
+    color: #333; /* Text color */
+  }
+  
+  
+  /* Smoothly Transitioning Text */
+  #animated-text {
+    display: inline-block;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Styles to Prevent Overlap on Mobile */
+  @media (max-width: 768px) {
+    /* Adjust blur circles for mobile view */
+    .main-content::before {
+        width: 150px; /* Reduce size */
+        height: 150px; /* Reduce size */
+        top: 100%; /* Adjust position */
+        left: 15%; /* Adjust position */
+    }
+  
+    .main-content::after {
+        width: 150px; /* Reduce size */
+        height: 150px; /* Reduce size */
+        top: 70%; /* Adjust position */
+        right: 15%; /* Adjust position */
+    }
+  
+    .small-blur-1 {
+        width: 100px; /* Reduce size */
+        height: 100px; /* Reduce size */
+        top: 25%; /* Adjust position */
+        left: 10%; /* Adjust position */
+    }
+  
+    .small-blur-2 {
+        width: 80px; /* Reduce size */
+        height: 80px; /* Reduce size */
+        top: 55%; /* Adjust position */
+        left: 60%; /* Adjust position */
+    }
+  
+    .small-blur-3 {
+        width: 70px; /* Reduce size */
+        height: 70px; /* Reduce size */
+        bottom: 25%; /* Adjust position */
+        right: 20%; /* Adjust position */
+    }
+  
+    .small-blur-4 {
+        width: 60px; /* Reduce size */
+        height: 60px; /* Reduce size */
+        bottom: 15%; /* Adjust position */
+        left: 30%; /* Adjust position */
+    }
+  }
+  
+  /* FOOTER */
+  .footer-section {
+    background-color: #ffffff; /* White background */
+    padding: 40px 20px; /* Padding for content */
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px; /* Rounded corners for the island effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    position: relative; /* To apply z-index */
+    z-index: 1;
+  }
+  
+  /* Top Section Styles */
+  .footer-logo {
+    max-width: 120px; /* Adjust logo size */
+  }
+  
+  .text-secondary {
+    font-size: 12px;
+  }
+  
+  .footer-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Bottom Section Styles */
+  .copyright-text {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .footer-nav {
+    font-size: 20px;
+  }
