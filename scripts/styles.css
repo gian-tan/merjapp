@@ -51,17 +51,6 @@
 }
 
 /* Button Styling */
-.btn-orange {
-  color: white;
-  padding: 8px 20px;
-}
-
-.btn-orange:hover {
-  background-color: #D4632A;
-  color: white;
-}
-
-/* BUTTONS */
 .btn {
   background-color: #F36D2B;
   border-color: #F36D2B;
@@ -71,9 +60,14 @@
   border-color: #d55a24;
 }
 
-.btn:active:focus {
-  background-color: #BD5A24;
-  border-color: #BD5A24;
+.btn-orange {
+  color: white;
+  padding: 8px 20px;
+}
+
+.btn-orange:hover {
+  background-color: #d55a24;
+  color: white;
 }
 
 /* WEBPAGE BEHAVIOR */
@@ -132,96 +126,19 @@ html {
 
 .download-btn {
   font-size: 1.2rem;
+  color:#F36D2B;
   padding: 10px 30px;
-  background-color: #F36D2B;
+  background-color: #ffffff;
   border-color: #F36D2B;
+  border-radius: 10px;
+  border-width: 2px;
   position: relative; /* Added to ensure positioning is relative to main content */
   z-index: 2; /* Set z-index higher to ensure it appears above the blur circles */
 }
 
-/* Main Content Section with Positioning for Blur Effects */
-.main-content {
-  position: relative;
-  overflow: hidden;
-  z-index: 1; /* Adjusted to ensure main content is on top */
-}
-
-/* Large Background Blur Circles */
-.main-content::before, .main-content::after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.8;
-  animation: float 7s infinite ease-in-out alternate;
-  z-index: 0; /* Set z-index lower than the main content */
-}
-
-.main-content::before {
-  top: 70%; /* Adjusted to move down and prevent overlap with text */
-  left: 20%;
+.download-btn:hover {
   background-color: #F36D2B;
-  animation-delay: 0s;
-}
-
-.main-content::after {
-  top: 80%; /* Adjusted to move down and prevent overlap with text */
-  right: 20%;
-  background-color: #98d1b0;
-  animation-delay: 5s;
-}
-
-/* Additional Smaller Blur Circles */
-.main-content .small-blur-1,
-.main-content .small-blur-2,
-.main-content .small-blur-3,
-.main-content .small-blur-4 {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(50px); /* Reduced blur for more visibility */
-  opacity: 0.8; /* Increased opacity */
-  animation: float 9s infinite ease-in-out alternate;
-  z-index: 0; /* Set z-index lower than the main content */
-}
-
-/* Position and Style for Additional Small Blurs */
-.small-blur-1 {
-  width: 120px;
-  height: 120px;
-  background-color: #F36D2B;
-  top: 20%; /* Keep this as is */
-  left: 40%;
-  animation-delay: 2s;
-}
-
-.small-blur-2 {
-  width: 100px;
-  height: 100px;
-  background-color: #98d1b0;
-  top: 65%; /* Keep this as is */
-  left: 15%;
-  animation-delay: 4s;
-}
-
-.small-blur-3 {
-  width: 90px;
-  height: 90px;
-  background-color: #F36D2B;
-  bottom: 10%; /* Adjusted to keep it from overlapping */
-  right: 35%;
-  animation-delay: 6s;
-}
-
-.small-blur-4 {
-  width: 70px;
-  height: 70px;
-  background-color: #98d1b0;
-  bottom: 15%;
-  left: 10%;
-  animation-delay: 8s;
+  border-color: #F36D2B;
 }
 
 /* Center Container */
@@ -230,77 +147,6 @@ html {
   width: 300px;
 }
 
-.brand-logo {
-  width: 150px; /* Adjust size as needed */
-}
-
-.brand-sub {
-  font-size: 3.5rem; /* Font size */
-  color: #333; /* Text color */
-}
-
-
-/* Smoothly Transitioning Text */
-#animated-text {
-  display: inline-block;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-out {
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive Styles to Prevent Overlap on Mobile */
-@media (max-width: 768px) {
-  /* Adjust blur circles for mobile view */
-  .main-content::before {
-      width: 150px; /* Reduce size */
-      height: 150px; /* Reduce size */
-      top: 60%; /* Adjust position */
-      left: 15%; /* Adjust position */
-  }
-
-  .main-content::after {
-      width: 150px; /* Reduce size */
-      height: 150px; /* Reduce size */
-      top: 70%; /* Adjust position */
-      right: 15%; /* Adjust position */
-  }
-
-  .small-blur-1 {
-      width: 100px; /* Reduce size */
-      height: 100px; /* Reduce size */
-      top: 25%; /* Adjust position */
-      left: 10%; /* Adjust position */
-  }
-
-  .small-blur-2 {
-      width: 80px; /* Reduce size */
-      height: 80px; /* Reduce size */
-      top: 55%; /* Adjust position */
-      left: 60%; /* Adjust position */
-  }
-
-  .small-blur-3 {
-      width: 70px; /* Reduce size */
-      height: 70px; /* Reduce size */
-      bottom: 25%; /* Adjust position */
-      right: 20%; /* Adjust position */
-  }
-
-  .small-blur-4 {
-      width: 60px; /* Reduce size */
-      height: 60px; /* Reduce size */
-      bottom: 15%; /* Adjust position */
-      left: 30%; /* Adjust position */
-  }
-}
 
 /* END OF CONTENT 1 */
 
@@ -371,53 +217,6 @@ html {
   top: 50%; /* Adjusted position */
   right: 20%;
   background-color: #98d1b0; /* Change as necessary */
-}
-
-/* PRODUCT SECTION SMALLER BLUR CIRCLES */
-.product-section .small-blur-1,
-.product-section .small-blur-2,
-.product-section .small-blur-3,
-.product-section .small-blur-4 {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(50px); /* Adjust blur for visibility */
-  opacity: 0.8; /* Adjust opacity as needed */
-  animation: float 9s infinite ease-in-out alternate;
-  z-index: 0; /* Set z-index lower than the main content */
-}
-
-/* Position and Style for Smaller Blurs in Product Section */
-.product-section .small-blur-1 {
-  width: 120px;
-  height: 120px;
-  background-color: #F36D2B;
-  top: 10%; /* Adjust position */
-  left: 70%; /* Adjust position */
-}
-
-.product-section .small-blur-2 {
-  width: 100px;
-  height: 100px;
-  background-color: #98d1b0;
-  top: 60%; /* Adjust position */
-  left: 20%; /* Adjust position */
-}
-
-.product-section .small-blur-3 {
-  width: 90px;
-  height: 90px;
-  background-color: #F36D2B;
-  bottom: 15%; /* Adjust position */
-  right: 35%; /* Adjust position */
-}
-
-.product-section .small-blur-4 {
-  width: 70px;
-  height: 70px;
-  background-color: #98d1b0;
-  bottom: 10%;
-  left: 10%; /* Adjust position */
 }
 
 /* END OF CONTENT 2 */
