@@ -183,5 +183,5 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBlurs();
   
     // Set interval for cycling through words
-    setInterval(changeText, 3000);
+    setInterval(changeText, 1750);
 });
