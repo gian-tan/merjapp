@@ -157,66 +157,37 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 2s ease; /* Transition for background color */
+  transition: background-color 1.5s ease; /* Transition for background color */
   background-color: transparent; /* Start with a transparent background */
   position: relative; /* Position for z-index control */
   z-index: 1; /* Ensure it's on top of any previous sections */
+  overflow: hidden; /* Hide any overflow from blur elements */
 }
 
-.product-container {
-  opacity: 0; /* Always visible */
-  transition: opacity 1s ease 1.5s; /* Transition for opacity */
-  z-index: 2; /* Higher z-index to ensure visibility */
+.product-text {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  color:white;
 }
 
-.product-section.visible .product-container {
-  opacity: 1; /* Reveal image */
+.product-text-2 {
+  color:#F36D2B;
 }
 
 .product-image {
   max-width: 100%; /* Responsive image */
   height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline spacing */
+  margin: 0 auto; /* Center the image */
 }
 
-/* When the background changes to black */
+/* When the section becomes visible */
 .product-section.visible {
   background-color: #000; /* Final black background */
-}
-
-/* BLUR CIRCLES 2 */
-.product-section::before, .product-section::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.8;
-  z-index: 0; /* Ensure they're behind the product content */
-  transition: opacity 1s ease; /* Smooth transition for appearance */
-  display: none; /* Initially hide them */
-}
-
-/* Show blur circles when the section is visible */
-.product-section.visible::before,
-.product-section.visible::after {
-  display: block; /* Show them when the section is visible */
-  opacity: 1;
-}
-
-/* Large Background Blur Circles for Product Section */
-.product-section::before {
-  width: 200px;
-  height: 200px;
-  top: 20%; /* Adjusted position */
-  left: 20%;
-  background-color: #F36D2B; /* Change as necessary */
-}
-
-.product-section::after {
-  width: 200px;
-  height: 200px;
-  top: 50%; /* Adjusted position */
-  right: 20%;
-  background-color: #98d1b0; /* Change as necessary */
 }
 
 /* END OF CONTENT 2 */
