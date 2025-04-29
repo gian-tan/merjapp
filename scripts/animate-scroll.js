@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productSection = document.querySelector(".product-section");
     const productContainer = document.querySelector(".product-container");
     // Get the animated text element
-    const animatedText = document.getElementById("product-text");
+    const animatedText = document.querySelector(".product-text");
     
     // Initially hide the text with opacity 0
     if (animatedText) {
