@@ -205,6 +205,22 @@ html {
   z-index: 1; /* Ensure it's on top of any previous sections */
 }
 
+.description-text {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.description-text-2 {
+  color:#F36D2B;
+  font-style: italic;
+}
+
+
+
 /* CONTENT 8 */
 .testimony-section {
   height: 100vh; /* Full viewport height */
