@@ -201,8 +201,9 @@ html {
   justify-content: center;
   transition: background-color 2s ease; /* Transition for background color */
   background-color: transparent; /* Start with a transparent background */
-  position: relative; /* Position for z-index control */
-  z-index: 1; /* Ensure it's on top of any previous sections */
+  position: relative; 
+  z-index: 1; 
+  overflow-x: hidden;
 }
 
 .description-text {
